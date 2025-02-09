@@ -32,9 +32,9 @@ To set up and run the website:
 
 ## Features
 
-- Centered text "TrackCount" on the homepage.
-- Buttons for "Source Code" and "Support".
-- A separate support page with information about me.
+- Home Page
+- Privacy Policy Page.
+- Support Page
 
 ## License
 
