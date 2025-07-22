@@ -36,7 +36,7 @@ a[href^="#footnote"] {
     align-items: center;
     justify-content: center;
     text-align: center;
-    max-width: 1200px;
+    max-width: 1000px;
     width: 75%;
     margin: 0 auto;
 }
@@ -68,11 +68,139 @@ a[href^="#footnote"] {
     background-color: #3a3a5e;
 }
 
+.app-store-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    margin: 10px;
+    padding: 0;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+}
+
+.testflight-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    margin: 10px;
+    padding: 0;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+}
+
 .button img {
     height: 20px;
     margin-right: 8px;
 }
 
+
+/* App showcase styles for the homepage */
+.app-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.app-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e1e2e;
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.app-icon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: contain;
+}
+
+.placeholder-icon {
+    width: 100%;
+    height: 100%;
+    background-color: #3a3a5e;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.app-card h2 {
+    margin: 0 0 15px 0;
+}
+
+.app-card h2 a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.app-card h2 a:hover {
+    color: #add8e6;
+}
+
+.app-card .button {
+    margin-top: 10px;
+}
+
+/* App header with icon for individual app pages */
+.app-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.app-page-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 22px;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
 
 /* Container for combining info-left and info-right sections */
 .info-container {
