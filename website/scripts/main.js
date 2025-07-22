@@ -6,13 +6,28 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (phoneImage) {
         phoneImage.style.cursor = 'pointer';
-        phoneImage.style.transition = 'transform 0.3s ease, z-index 0.3s ease';
+        phoneImage.style.transition = 'transform 0.5s ease, top 0.5s ease, left 0.5s ease';
         
         let isEnlarged = false;
         let overlay = null;
+        let originalRect = null;
+        let placeholder = null;
         
         phoneImage.addEventListener('click', function() {
             if (!isEnlarged) {
+                // Store original position
+                originalRect = phoneImage.getBoundingClientRect();
+                
+                // Create placeholder to maintain layout
+                placeholder = document.createElement('div');
+                placeholder.style.cssText = `
+                    width: ${originalRect.width}px;
+                    height: ${originalRect.height}px;
+                    margin: ${getComputedStyle(phoneImage).margin};
+                    visibility: hidden;
+                `;
+                phoneImage.parentNode.insertBefore(placeholder, phoneImage);
+                
                 // Create overlay background
                 overlay = document.createElement('div');
                 overlay.className = 'image-overlay';
@@ -26,7 +41,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     backdrop-filter: blur(5px);
                     z-index: 999;
                     opacity: 0;
-                    transition: opacity 0.3s ease;
+                    transition: opacity 0.5s ease;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 `;
                 document.body.appendChild(overlay);
                 
@@ -35,10 +53,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     overlay.style.opacity = '1';
                 }, 10);
                 
-                // Enlarge the image
-                phoneImage.style.transform = 'scale(1.8)';
+                // Smoothly animate to center
+                phoneImage.style.position = 'fixed';
                 phoneImage.style.zIndex = '1000';
-                phoneImage.style.position = 'relative';
+                phoneImage.style.top = originalRect.top + 'px';
+                phoneImage.style.left = originalRect.left + 'px';
+                phoneImage.style.width = originalRect.width + 'px';
+                phoneImage.style.height = originalRect.height + 'px';
+                
+                // Animate to center after a brief delay
+                setTimeout(() => {
+                    phoneImage.style.top = '50%';
+                    phoneImage.style.left = '50%';
+                    phoneImage.style.transform = 'translate(-50%, -50%) scale(1.8)';
+                }, 50);
+                
                 isEnlarged = true;
                 
                 // Close on overlay click
@@ -56,13 +85,38 @@ document.addEventListener('DOMContentLoaded', function() {
                         overlay.parentNode.removeChild(overlay);
                     }
                     overlay = null;
-                }, 300);
+                }, 500);
             }
             
-            // Return to normal size
-            phoneImage.style.transform = 'scale(1)';
-            phoneImage.style.zIndex = '1';
-            phoneImage.style.position = 'static';
+            if (placeholder && originalRect) {
+                // Get the current position of the placeholder (which reflects scroll position)
+                const currentRect = placeholder.getBoundingClientRect();
+                
+                // Animate back to current placeholder position (not original stored position)
+                phoneImage.style.top = currentRect.top + 'px';
+                phoneImage.style.left = currentRect.left + 'px';
+                phoneImage.style.transform = 'translate(0, 0) scale(1)';
+                
+                // Return to normal flow after animation
+                setTimeout(() => {
+                    phoneImage.style.position = 'static';
+                    phoneImage.style.top = 'auto';
+                    phoneImage.style.left = 'auto';
+                    phoneImage.style.width = 'auto';
+                    phoneImage.style.height = 'auto';
+                    phoneImage.style.transform = 'scale(1)';
+                    phoneImage.style.zIndex = '1';
+                    
+                    // Remove placeholder
+                    if (placeholder && placeholder.parentNode) {
+                        placeholder.parentNode.removeChild(placeholder);
+                        placeholder = null;
+                    }
+                    
+                    originalRect = null;
+                }, 500);
+            }
+            
             isEnlarged = false;
         }
     }
