@@ -367,8 +367,9 @@ a[href^="#footnote"] {
 }
 
 .phone-image {
-    max-width: 300px;
-    height: auto;
+    width: auto;
+    max-width: 400px;
+    max-height: 480px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     cursor: pointer;
@@ -420,7 +421,16 @@ a[href^="#footnote"] {
     }
     
     .phone-image {
-        max-width: 250px;
+        width: 200px;
+    }
+    
+    /* Reorder the reversed hstack on mobile */
+    .hstack-reverse .features-container {
+        order: 2;
+    }
+    
+    .hstack-reverse .phone-screenshot {
+        order: 1;
     }
 }
 

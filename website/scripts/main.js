@@ -2,11 +2,11 @@
 
 // Screenshot enlargement functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const phoneImage = document.querySelector('.phone-image');
+    const phoneImages = document.querySelectorAll('.phone-image');
     
-    if (phoneImage) {
+    phoneImages.forEach((phoneImage, index) => {
         phoneImage.style.cursor = 'pointer';
-        phoneImage.style.transition = 'transform 0.5s ease, top 0.5s ease, left 0.5s ease';
+        phoneImage.style.transition = 'transform 0.5s ease, top 0.5s ease, left 0.5s ease, width 0.5s ease, height 0.5s ease';
         
         let isEnlarged = false;
         let overlay = null;
@@ -99,13 +99,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Return to normal flow after animation
                 setTimeout(() => {
-                    phoneImage.style.position = 'static';
-                    phoneImage.style.top = 'auto';
-                    phoneImage.style.left = 'auto';
-                    phoneImage.style.width = 'auto';
-                    phoneImage.style.height = 'auto';
-                    phoneImage.style.transform = 'scale(1)';
-                    phoneImage.style.zIndex = '1';
+                    phoneImage.style.position = '';
+                    phoneImage.style.top = '';
+                    phoneImage.style.left = '';
+                    phoneImage.style.width = '';
+                    phoneImage.style.height = '';
+                    phoneImage.style.transform = '';
+                    phoneImage.style.zIndex = '';
                     
                     // Remove placeholder
                     if (placeholder && placeholder.parentNode) {
@@ -119,5 +119,5 @@ document.addEventListener('DOMContentLoaded', function() {
             
             isEnlarged = false;
         }
-    }
+    });
 });
