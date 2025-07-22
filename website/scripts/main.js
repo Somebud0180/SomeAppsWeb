@@ -2,7 +2,7 @@
 
 // Screenshot enlargement functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const phoneImages = document.querySelectorAll('.phone-image');
+    const phoneImages = document.querySelectorAll('.phone-image, .phone-wide-image');
     
     phoneImages.forEach((phoneImage, index) => {
         phoneImage.style.cursor = 'pointer';
