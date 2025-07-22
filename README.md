@@ -1,4 +1,4 @@
-# SomeAppsWeb
+# [SomeAppsWeb](https://somebud0180.github.io/SomeAppsWeb/index.html)
 
 This project is a simple website featuring my two apps, TrackCount and rInventory. The website also contains the vital privacy policy and contact for the App Store.
 
