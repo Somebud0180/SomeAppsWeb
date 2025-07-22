@@ -6,12 +6,17 @@ This project is a simple website featuring my two apps, TrackCount and rInventor
 
 ```
 website
-├── index.html        # Main HTML document for the homepage
-├── support.html      # HTML document providing information about me
+├── index.html        # Main homepage (Contains links to the apps)
+├── trackcount.html   # Webpage containing information about TrackCount
+├── rinventory.html   # Webpage containing information about rInventory
+├── privacy.html      # Webpage providing information about the privacy policy
+├── support.html      # Webpage document providing information about me
 ├── styles            # Directory containing CSS styles
 │   └── styles.css    # Styles for the website
-└── scripts           # Directory containing JavaScript files
-    └── main.js       # JavaScript for interactive functionality
+├── scripts           # Directory containing JavaScript files
+│   └── main.js       # JavaScript for interactive functionality
+└── assets            # Directory containing assets/images used in the website
+    
 LICENSE           # Project license
 README.md         # Project documentation
 ```
