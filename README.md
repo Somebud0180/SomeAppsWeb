@@ -1,6 +1,6 @@
-# TrackCount-Web
+# SomeAppsWeb
 
-This project is a simple website featuring a homepage with links to the source code and support info.
+This project is a simple website featuring my two apps, TrackCount and rInventory. The website also contains the vital privacy policy and contact for the App Store.
 
 ## Project Structure
 
@@ -33,6 +33,8 @@ To set up and run the website:
 ## Features
 
 - Home Page
+- TrackCount Page
+- rInventory Page
 - Privacy Policy Page.
 - Support Page
 
