@@ -72,7 +72,7 @@ a[href^="#footnote"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 52px;
+    height: 44px;
     margin: 10px;
     padding: 0;
     background-color: transparent;
@@ -84,7 +84,7 @@ a[href^="#footnote"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 52px;
+    height: 44px;
     margin: 10px;
     padding: 0;
     background-color: transparent;
@@ -278,5 +278,105 @@ a[href^="#footnote"] {
 
 .navbar a.active {
     border-bottom: 2px solid #ffa500;
+}
+
+/* Additional details section styles */
+.details-section {
+    margin-top: 60px;
+    padding-bottom: 80px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.headline-container {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.large-headline {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #60B0FB;
+    margin: 0;
+    font-weight: 300;
+}
+
+.hstack {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.phone-screenshot {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-image {
+    max-width: 300px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+.phone-image:hover {
+    transform: scale(1.05);
+}
+
+.features-container {
+    flex: 1;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.features-header {
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+}
+
+.features-body {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #cccccc;
+    margin: 0;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .large-headline {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hstack {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .features-container {
+        text-align: center;
+        padding-left: 0;
+    }
+    
+    .phone-image {
+        max-width: 250px;
+    }
 }
 
