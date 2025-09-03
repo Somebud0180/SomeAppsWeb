@@ -136,6 +136,30 @@ a[href^="#footnote"] {
     z-index: 2;
 }
 
+/* Callout overlay for the TestFlight button */
+.callout-overlay {
+    position: absolute;
+    right: -24px;  /* stick a bit outside the button */
+    bottom: -44px; /* push lower below the button */
+    width: 140px;  /* tweak as needed based on asset */
+    height: auto;
+    pointer-events: none; /* don't block clicks on the button */
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
+}
+
+@keyframes callout-bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+@media (max-width: 480px) {
+    .callout-overlay {
+    width: 110px;
+    right: -8px;
+    bottom: -48px;
+    }
+}
+
 .button img {
     height: 20px;
     margin-right: 8px;
