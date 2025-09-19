@@ -1,4 +1,38 @@
 /* Global styles */
+/* Alert-like capsule for version info */
+.alert-capsule {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 1.5em auto;
+    padding: 0.6em 1.4em;
+    border-radius: 999px;
+    background: rgba(0, 123, 255, 0.15); /* translucent blue */
+    color: #eeeeee;
+    font-weight: 600;
+    font-size: 1.05em;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(0,123,255,0.18);
+}
+
+/* Smaller alert capsule for index.html */
+.alert-capsule-small {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 1em auto;
+    padding: 0.35em 0.9em;
+    border-radius: 999px;
+    background: rgba(0, 123, 255, 0.15);
+    color: #eeeeee;
+    font-weight: 600;
+    font-size: 0.85em;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    backdrop-filter: blur(1.5px);
+    border: 1px solid rgba(0,123,255,0.15);
+}
+
 /* Near-black page background with a slight blue hue */
 body {
     color: #ffffff;
@@ -134,30 +168,6 @@ a[href^="#footnote"] {
     background-color: transparent;
     position: relative;
     z-index: 2;
-}
-
-/* Callout overlay for the TestFlight button */
-.callout-overlay {
-    position: absolute;
-    right: -24px;  /* stick a bit outside the button */
-    bottom: -44px; /* push lower below the button */
-    width: 140px;  /* tweak as needed based on asset */
-    height: auto;
-    pointer-events: none; /* don't block clicks on the button */
-    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
-}
-
-@keyframes callout-bob {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-4px); }
-}
-
-@media (max-width: 480px) {
-    .callout-overlay {
-    width: 110px;
-    right: -8px;
-    bottom: -48px;
-    }
 }
 
 .button img {
