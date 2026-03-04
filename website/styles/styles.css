@@ -284,17 +284,22 @@ a[href^="#footnote"] {
 /* Container for combining info-left and info-right sections */
 .info-container {
 	display: flex;
+	gap: 48px;
 	background-color: #484852;
 	padding: 20px 40px;
 	border-radius: 8px;
 	width: 80%;
-	margin: 0 auto;
 }
 
 .info-left {
 	flex: 1;
 	margin-right: 20px;
 	text-align: left;
+	margin: 0;
+}
+
+.info-left h1 {
+	margin: 0;
 }
 
 .info-right {
@@ -302,6 +307,11 @@ a[href^="#footnote"] {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	margin: 0;
+}
+
+.info-right p {
+	margin: 0;
 }
 
 .info-right img {
@@ -335,14 +345,18 @@ a[href^="#footnote"] {
 /* Navbar styling */
 .navbar {
 	text-align: center;
-	margin-bottom: 20px;
 	flex-shrink: 0;
+	margin-bottom: 1rem;
 }
 
 .navbar ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 	list-style: none;
 	padding: 0;
-	display: inline-block;
+	margin: 1rem;
 }
 
 .navbar li {
@@ -462,6 +476,14 @@ a[href^="#footnote"] {
 
 /* Responsive design for mobile */
 @media (max-width: 768px) {
+	.navbar ul {
+		gap: 0.5rem;
+	}
+
+	.container {
+		width: 90%;
+	}
+
 	.large-headline {
 		font-size: 2.5rem;
 	}
@@ -491,6 +513,12 @@ a[href^="#footnote"] {
 
 	.hstack-reverse .phone-screenshot {
 		order: 1;
+	}
+
+	.info-container {
+		gap: 0.5rem;
+		padding: 1rem;
+		flex-direction: column;
 	}
 }
 
