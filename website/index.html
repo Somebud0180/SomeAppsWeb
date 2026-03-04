@@ -1,62 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.svg">
-    <title>Home - SomeAppsWeb</title>
-</head>
-<body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="trackcount.html">TrackCount</a></li>
-            <li><a href="rinventory.html">rInventory</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="support.html">Support</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <div id="animated-icon" style="width:256px;height:256px;">
-                <img src="assets/icon.svg" alt="App Icon" style="width:100%;height:100%;display:block;" />
-            </div>
-            <h1>SomeApps</h1>
-        </div>
-        <div class="app-showcase">
-            <div class="app-card">
-                <a href="trackcount.html" class="card-link"></a>
-                <div class="app-icon">
-                    <img src="assets/TrackCountIcon.png" alt="TrackCount Icon">
-                </div>
-                <h2>TrackCount</h2>
-                <div class="alert-capsule-small">
-                    TestFlight v1.4 Coming Soon! Demo available on the TrackCount page.
-                </div>
-                <a href="https://apps.apple.com/us/app/trackcount/id6741474062?itscg=30200&itsct=apps_box_badge&mttnsubad=6741474062" class="app-store-button">
-                    <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1739232000" alt="Download on the App Store" style="height: 52px; width: auto;" />
-                </a>
-                <a href="https://testflight.apple.com/join/Q2E6UzhY" class="testflight-button">
-                <img src="assets/TestFlightBadge.svg" alt="Download on TestFlight" style="height: 44px; width: auto;" />
-                </a>
-            </div>
-            <div class="app-card">
-                <a href="rinventory.html" class="card-link"></a>
-                <div class="app-icon">
-                    <img src="assets/rInventoryIcon.png" alt="rInventory Icon">
-                </div>
-                <h2>rInventory</h2>
-                <div class="alert-capsule-small">
-                    Watch App, available in the latest TestFlight build!
-                </div>
-                <a href="https://testflight.apple.com/join/T5hpanZA" class="testflight-button">
-                    <img src="assets/TestFlightBadge.svg" alt="Download on TestFlight" style="height: 52px; width: auto;" />
-                </a>
-            </div>
-        </div>
-    </div>
-    <script src="scripts/main.js"></script>
-    <script src="https://somebud0180.github.io/slink/slink.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles/styles.css" />
+		<link rel="icon" type="image/x-icon" href="assets/favicon.svg" />
+		<title>Home - SomeAppsWeb</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<nav class="navbar">
+			<ul>
+				<li><a href="index.html" class="active">Home</a></li>
+				<li><a href="trackcount.html">TrackCount</a></li>
+				<li><a href="rinventory.html">rInventory</a></li>
+				<li><a href="privacy.html">Privacy Policy</a></li>
+				<li><a href="support.html">Support</a></li>
+			</ul>
+		</nav>
+		<div class="container">
+			<div
+				style="
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+				"
+			>
+				<div id="animated-icon" style="width: 256px; height: 256px">
+					<img
+						src="assets/icon.svg"
+						alt="App Icon"
+						style="width: 100%; height: 100%; display: block"
+					/>
+				</div>
+				<h1>SomeApps</h1>
+			</div>
+			<div class="app-showcase">
+				<div class="app-card">
+					<a href="trackcount.html" class="card-link"></a>
+					<div class="app-icon">
+						<img src="assets/TrackCountIcon.png" alt="TrackCount Icon" />
+					</div>
+					<h2>TrackCount</h2>
+					<div class="alert-capsule-small">
+						TestFlight v1.4 Coming Soon! Demo available on the TrackCount page.
+					</div>
+					<a
+						href="https://apps.apple.com/us/app/trackcount/id6741474062?itscg=30200&itsct=apps_box_badge&mttnsubad=6741474062"
+						class="app-store-button"
+					>
+						<img
+							src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1739232000"
+							alt="Download on the App Store"
+							style="height: 52px; width: auto"
+						/>
+					</a>
+					<a
+						href="https://testflight.apple.com/join/Q2E6UzhY"
+						class="testflight-button"
+					>
+						<img
+							src="assets/TestFlightBadge.svg"
+							alt="Download on TestFlight"
+							style="height: 44px; width: auto"
+						/>
+					</a>
+				</div>
+				<div class="app-card">
+					<a href="rinventory.html" class="card-link"></a>
+					<div class="app-icon">
+						<img src="assets/rInventoryIcon.png" alt="rInventory Icon" />
+					</div>
+					<h2>rInventory</h2>
+					<div class="alert-capsule-small">
+						Watch App, available in the latest TestFlight build!
+					</div>
+					<a
+						href="https://testflight.apple.com/join/T5hpanZA"
+						class="testflight-button"
+					>
+						<img
+							src="assets/TestFlightBadge.svg"
+							alt="Download on TestFlight"
+							style="height: 52px; width: auto"
+						/>
+					</a>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<p>Copyright &copy; 2025 Ethan John</p>
+			<a
+				href="https://somebud0180.github.io/SomeProot/"
+				class="someproot-footer"
+				>SomeProot</a
+			>
+		</footer>
+		<script src="scripts/main.js"></script>
+		<script src="https://somebud0180.github.io/slink/slink.js"></script>
+	</body>
 </html>
